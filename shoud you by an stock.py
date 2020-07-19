@@ -1,7 +1,5 @@
 from selenium import webdriver
 import data
-from data import total_stock
-import xlwt
 from xlwt import Workbook
 
 REBUILD_DATA = False  # true for new data
@@ -51,8 +49,8 @@ for index, value in enumerate(chg):
 stock_save = Workbook()
 sheet1 = stock_save.add_sheet('Sheet 1')
 sheet_c = 0
-for asdfg in company_name:
-	sheet1.write(sheet_c, 0, asdfg)
+for stock_buy in company_name:
+	sheet1.write(sheet_c, 0, stock_buy)
 	sheet_c += 1
 for stocking in index_name:
 	sheet1.write(stocking, 1, "buy")
