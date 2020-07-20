@@ -2,7 +2,6 @@ from selenium import webdriver
 import data
 from xlwt import Workbook
 
-REBUILD_DATA = False  # true for new data
 
 PATH = "C:\Program Files (x86)\chromedriver.exe"
 driver = webdriver.Chrome(PATH)
@@ -59,3 +58,4 @@ for stock_sell in index_name_sell:
 
 stock_save.save("sample.xls")
 driver.quit()
+
