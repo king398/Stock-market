@@ -1,5 +1,5 @@
 from selenium import webdriver
-import data
+
 from xlwt import Workbook
 
 total_stock = []
