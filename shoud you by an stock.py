@@ -1,5 +1,4 @@
 from selenium import webdriver
-
 from xlwt import Workbook
 
 total_stock = []
@@ -9,12 +8,13 @@ def new_data(data):
 	total_stock.append(data)
 
 
-PATH = "C:\Program Files (x86)\chromedriver.exe"
-driver = webdriver.Chrome(PATH)
+PATH = "C:\Program Files (x86)\chromedriver.exe"  # your path for the chrome web driver
+driver = webdriver.Chrome(PATH)  # for chrome
 
-driver.get("https://www.moneycontrol.com/india/stockmarket/stock-deliverables/marketstatistics/indices/bse-500.html")
-stock = driver.find_element_by_tag_name('tbody')
-stock_name = driver.find_elements_by_tag_name("td")
+driver.get(
+	"https://www.moneycontrol.com/india/stockmarket/stock-deliverables/marketstatistics/indices/bse-500.html")  # bse 500
+
+stock_name = driver.find_elements_by_tag_name("td")  # element name
 chg = []
 company_name = []
 chosen = []
@@ -62,5 +62,5 @@ for stocking in index_name:
 for stock_sell in index_name_sell:
 	sheet1.write(stock_sell, 1, "sell")
 
-stock_save.save("sample.xls")
+stock_save.save("sample.xls")  # enter the name of the file in the quotation marks
 driver.quit()
