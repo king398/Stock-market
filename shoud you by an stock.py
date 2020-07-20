@@ -25,7 +25,7 @@ im = -1
 rt = -1
 for i in stock_name:
 	ip = i.text
-	data.new_data(data=ip)
+	new_data(data=ip)
 	im += 1
 	rt += 1
 	check = (im - 7) % 10
