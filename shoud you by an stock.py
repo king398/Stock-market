@@ -1,6 +1,10 @@
+import time
 from selenium import webdriver
 from xlwt import Workbook
+import dominos
+from dominos.api import Client
 
+start = time.time()
 total_stock = []
 
 
@@ -64,3 +68,4 @@ for stock_sell in index_name_sell:
 
 stock_save.save("sample.xls")  # enter the name of the file in the quotation marks
 driver.quit()
+print(time.time() - start)
