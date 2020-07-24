@@ -58,6 +58,12 @@ for index, value in enumerate(chg):
 stock_save = Workbook()
 sheet1 = stock_save.add_sheet('Sheet 1')
 sheet_c = 0
+try:
+	for stock_buy in company_name:
+		sheet1.write(sheet_c, 0, stock_buy)
+	sheet_c += 1
+except:
+	print("nothing")
 
 for stocking in index_name:
 	sheet1.write(stocking, 2, "buy")

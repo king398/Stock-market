@@ -15,8 +15,7 @@ def new_data(data):
 PATH = "C:\Program Files (x86)\chromedriver.exe"  # your path for the chrome web driver
 driver = webdriver.Chrome(PATH)  # for chrome
 
-driver.get(
-	"https://www.moneycontrol.com/india/stockmarket/stock-deliverables/marketstatistics/indices/bse-500.html")  # bse 500
+driver.get("https://www.moneycontrol.com/india/stockmarket/stock-deliverables/marketstatistics/indices/bse-500.html")  # bse 500
 
 stock_name = driver.find_elements_by_tag_name("td")  # element name
 chg = []
